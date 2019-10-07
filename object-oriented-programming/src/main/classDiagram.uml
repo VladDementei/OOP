@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="623.6666666666666" y="189.0">by.courses.java.oop.model.aircraft.CargoAircraft</node>
+    <node x="399.66666666666663" y="200.0">by.courses.java.oop.model.aircraft.PassengerAircraft</node>
+    <node x="145.66666666666669" y="211.0">by.courses.java.oop.model.aircraft.SpecialPurposeAircraft</node>
+    <node x="390.75" y="0.0">by.courses.java.oop.model.aircraft.Aircraft</node>
+    <node x="0.0" y="334.0">by.courses.java.oop.model.aircraft.FireFighterAircraft</node>
+    <node x="0.0" y="452.0">by.courses.java.oop.demo.Main</node>
+    <node x="254.0" y="345.0">by.courses.java.oop.model.aircraft.MedicalAircraft</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="by.courses.java.oop.model.aircraft.PassengerAircraft" target="by.courses.java.oop.model.aircraft.Aircraft">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="by.courses.java.oop.model.aircraft.FireFighterAircraft" target="by.courses.java.oop.model.aircraft.SpecialPurposeAircraft">
+      <point x="0.0" y="-36.5" />
+      <point x="117.0" y="309.0" />
+      <point x="204.16666666666669" y="309.0" />
+      <point x="-58.5" y="25.5" />
+    </edge>
+    <edge source="by.courses.java.oop.model.aircraft.CargoAircraft" target="by.courses.java.oop.model.aircraft.Aircraft">
+      <point x="0.0" y="-47.5" />
+      <point x="741.6666666666666" y="164.0" />
+      <point x="575.75" y="164.0" />
+      <point x="74.0" y="69.5" />
+    </edge>
+    <edge source="by.courses.java.oop.model.aircraft.MedicalAircraft" target="by.courses.java.oop.model.aircraft.SpecialPurposeAircraft">
+      <point x="0.0" y="-25.5" />
+      <point x="408.5" y="309.0" />
+      <point x="321.1666666666667" y="309.0" />
+      <point x="58.5" y="25.5" />
+    </edge>
+    <edge source="by.courses.java.oop.model.aircraft.SpecialPurposeAircraft" target="by.courses.java.oop.model.aircraft.Aircraft">
+      <point x="0.0" y="-25.5" />
+      <point x="262.6666666666667" y="164.0" />
+      <point x="427.75" y="164.0" />
+      <point x="-74.0" y="69.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1" x="381.5454545454545" y="205.90909090909088" />
+  <SelectedNodes>
+    <node>by.courses.java.oop.model.aircraft.Aircraft</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
