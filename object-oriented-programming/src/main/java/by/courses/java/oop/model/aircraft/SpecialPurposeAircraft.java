@@ -1,5 +1,11 @@
 package by.courses.java.oop.model.aircraft;
 
 public abstract class SpecialPurposeAircraft extends Aircraft {
-    boolean hasSpecialistsOnBoard;
+    private boolean hasSpecialistsOnBoard;
+
+    public SpecialPurposeAircraft(String producerCompany, String model, String tailNumber, double maxWeightCarriedKG,
+                                  int maxFlightRangeKM, boolean hasSpecialistsOnBoard) {
+        super(producerCompany, model, tailNumber, maxWeightCarriedKG, maxFlightRangeKM);
+        this.hasSpecialistsOnBoard = hasSpecialistsOnBoard;
+    }
 }
