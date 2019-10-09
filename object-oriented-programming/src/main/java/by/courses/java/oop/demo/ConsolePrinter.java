@@ -30,6 +30,10 @@ public class ConsolePrinter {
         System.out.print(EXECUTE);
     }
 
+    public static void printTotalMaximumWeightCarried(double sum){
+        System.out.println("Sum of all maximum weight carried = " + sum + "kg");
+    }
+
     public static void printWrongValue(){
         System.out.println(ERROR);
     }

@@ -48,10 +48,10 @@ public class Main {
                 11000, 4500, true,
                 Arrays.asList(MedicalAircraft.MedicalEquipment.TOMOGRAPH)));
 
-        startConsoleDialog();
+        startConsoleDialog(airline);
     }
 
-    private static void startConsoleDialog(){
+    private static void startConsoleDialog(Airline airline){
         Scanner consoleScanner = new Scanner(System.in);
         ConsolePrinter.startConsolePrinter();
         USER_DIALOG: while (true){
@@ -61,6 +61,7 @@ public class Main {
                     ConsolePrinter.printCommandsList();
                     break;
                 }case "2":{
+                    ConsolePrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
                     break;
                 }case "3":{
                     break;

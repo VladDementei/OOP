@@ -28,6 +28,10 @@ public class Airline {
         }
     }
 
+    public double countTotalMaximumWeightCarried(){
+        return aircraftFleet.stream().mapToDouble(Aircraft::getMaxWeightCarriedKG).sum();
+    }
+
     @Override
     public String toString() {
         return "Airline: company name \"" + companyName + "\", pricing policy = " + pricingPolicy +
