@@ -10,4 +10,10 @@ public class PassengerAircraft extends Aircraft {
         this.maxPassengersCarried = maxPassengersCarried;
         this.hasKitchen = hasKitchen;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", maximum number of passengers = " + maxPassengersCarried +
+                ", is kitchen available on board = " + hasKitchen;
+    }
 }

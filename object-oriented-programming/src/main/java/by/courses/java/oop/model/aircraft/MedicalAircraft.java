@@ -12,4 +12,9 @@ public class MedicalAircraft extends SpecialPurposeAircraft {
         super(producerCompany, model, tailNumber, maxWeightCarriedKG, maxFlightRangeKM, hasSpecialistsOnBoard);
         this.onBoardEquipment = onBoardEquipment;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", medical equipment on board = " + onBoardEquipment.toString();
+    }
 }

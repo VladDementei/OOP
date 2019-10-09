@@ -27,4 +27,10 @@ public class Airline {
             aircraftFleet.add(aircraft);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Airline: company name \"" + companyName + "\", pricing policy = " + pricingPolicy +
+                ", fleet size = " + aircraftFleet.size() + " aircraft";
+    }
 }

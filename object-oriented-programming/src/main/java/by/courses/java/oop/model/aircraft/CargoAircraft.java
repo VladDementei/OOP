@@ -13,4 +13,10 @@ public class CargoAircraft extends Aircraft {
         this.maxCargoWidthMetres = maxCargoWidthMetres;
         this.maxCargoHeightMetres = maxCargoHeightMetres;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", max cargo dimensions (L*W*H) = " +
+                maxCargoLengthMetres + "*" + maxCargoWidthMetres + "*" + maxCargoHeightMetres + " metres";
+    }
 }

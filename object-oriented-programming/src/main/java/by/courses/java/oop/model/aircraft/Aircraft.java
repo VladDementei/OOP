@@ -15,4 +15,11 @@ public abstract class Aircraft {
         this.maxWeightCarriedKG = maxWeightCarriedKG;
         this.maxFlightRangeKM = maxFlightRangeKM;
     }
+
+    @Override
+    public String toString() {
+        return "Aircraft: producer company \"" + producerCompany + "\", model \"" + model +
+                "\", tail number \"" + tailNumber + "\", maximum weight carried = " + maxWeightCarriedKG +"kg" +
+                ", maximum flight range = " + maxFlightRangeKM + "km";
+    }
 }

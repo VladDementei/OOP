@@ -8,4 +8,9 @@ public abstract class SpecialPurposeAircraft extends Aircraft {
         super(producerCompany, model, tailNumber, maxWeightCarriedKG, maxFlightRangeKM);
         this.hasSpecialistsOnBoard = hasSpecialistsOnBoard;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", has specialists on board = " + hasSpecialistsOnBoard;
+    }
 }
