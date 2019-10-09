@@ -38,6 +38,10 @@ public class ConsolePrinter {
         System.out.println(airline.getAllAircraftsInfo());
     }
 
+    public static void printTotalAmountPassengersSeats(int seats){
+        System.out.println("Sum of all passengers seats = " + seats);
+    }
+
     public static void printTotalMaximumWeightCarried(double sum){
         System.out.println("Sum of all maximum weight carried = " + sum + "kg");
     }

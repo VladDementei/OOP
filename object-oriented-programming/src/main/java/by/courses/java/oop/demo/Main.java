@@ -65,6 +65,7 @@ public class Main {
                     ConsolePrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
                     break;
                 }case "3":{
+                    ConsolePrinter.printTotalAmountPassengersSeats(airline.countTotalAmountPassengersSeats());
                     break;
                 }case "4":{
                     airline.sort(new AircraftsRangeComparator());

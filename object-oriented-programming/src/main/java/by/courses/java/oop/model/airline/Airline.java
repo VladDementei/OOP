@@ -1,6 +1,7 @@
 package by.courses.java.oop.model.airline;
 
 import by.courses.java.oop.model.aircraft.Aircraft;
+import by.courses.java.oop.model.aircraft.PassengerAircraft;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -45,6 +46,11 @@ public class Airline {
 
     public double countTotalMaximumWeightCarried(){
         return aircraftFleet.stream().mapToDouble(Aircraft::getMaxWeightCarriedKG).sum();
+    }
+
+    public int countTotalAmountPassengersSeats(){
+        return aircraftFleet.stream().filter(elem -> elem instanceof PassengerAircraft).
+                mapToInt(elem -> ((PassengerAircraft)elem).getMaxPassengersCarried()).sum();
     }
 
     @Override
