@@ -20,6 +20,10 @@ public abstract class Aircraft {
         return maxWeightCarriedKG;
     }
 
+    public int getMaxFlightRangeKM() {
+        return maxFlightRangeKM;
+    }
+
     @Override
     public String toString() {
         return "Aircraft: producer company \"" + producerCompany + "\", model \"" + model +

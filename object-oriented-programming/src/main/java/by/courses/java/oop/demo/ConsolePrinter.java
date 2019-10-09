@@ -1,5 +1,7 @@
 package by.courses.java.oop.demo;
 
+import by.courses.java.oop.model.airline.Airline;
+
 public class ConsolePrinter {
 
     static {
@@ -30,8 +32,19 @@ public class ConsolePrinter {
         System.out.print(EXECUTE);
     }
 
+    public static void printAllAircrafts(Airline airline){
+        System.out.println(airline);
+        System.out.println("Airline fleet: ");
+        System.out.println(airline.getAllAircraftsInfo());
+    }
+
     public static void printTotalMaximumWeightCarried(double sum){
         System.out.println("Sum of all maximum weight carried = " + sum + "kg");
+    }
+
+    public static void printSortedAirline(Airline airline){
+        System.out.println("Airline after sort");
+        printAllAircrafts(airline);
     }
 
     public static void printWrongValue(){

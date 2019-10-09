@@ -1,5 +1,6 @@
 package by.courses.java.oop.demo;
 
+import by.courses.java.oop.comporator.AircraftsRangeComparator;
 import by.courses.java.oop.model.aircraft.CargoAircraft;
 import by.courses.java.oop.model.aircraft.FireFighterAircraft;
 import by.courses.java.oop.model.aircraft.MedicalAircraft;
@@ -66,6 +67,8 @@ public class Main {
                 }case "3":{
                     break;
                 }case "4":{
+                    airline.sort(new AircraftsRangeComparator());
+                    ConsolePrinter.printSortedAirline(airline);
                     break;
                 }case "5":{
                     break;

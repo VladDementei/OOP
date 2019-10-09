@@ -3,6 +3,7 @@ package by.courses.java.oop.model.airline;
 import by.courses.java.oop.model.aircraft.Aircraft;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Airline {
@@ -26,6 +27,20 @@ public class Airline {
         if(aircraft != null){
             aircraftFleet.add(aircraft);
         }
+    }
+
+    public String getAllAircraftsInfo(){
+        StringBuffer stringBuffer = new StringBuffer();
+        aircraftFleet.forEach(elem -> {
+            stringBuffer.append(elem.toString());
+            stringBuffer.append("\n");
+
+        });
+        return stringBuffer.toString();
+    }
+
+    public void sort(Comparator<Aircraft> comparator){
+        aircraftFleet.sort(comparator);
     }
 
     public double countTotalMaximumWeightCarried(){
