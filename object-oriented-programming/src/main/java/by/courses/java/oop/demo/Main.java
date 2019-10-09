@@ -7,6 +7,7 @@ import by.courses.java.oop.model.aircraft.PassengerAircraft;
 import by.courses.java.oop.model.airline.Airline;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,5 +48,33 @@ public class Main {
                 11000, 4500, true,
                 Arrays.asList(MedicalAircraft.MedicalEquipment.TOMOGRAPH)));
 
+        startConsoleDialog();
+    }
+
+    private static void startConsoleDialog(){
+        Scanner consoleScanner = new Scanner(System.in);
+        ConsolePrinter.startConsolePrinter();
+        USER_DIALOG: while (true){
+            ConsolePrinter.printExecuteLine();
+            switch (consoleScanner.next()){
+                case "1": {
+                    ConsolePrinter.printCommandsList();
+                    break;
+                }case "2":{
+                    break;
+                }case "3":{
+                    break;
+                }case "4":{
+                    break;
+                }case "5":{
+                    break;
+                }case "6":{
+                    break USER_DIALOG;
+                }default: {
+                    ConsolePrinter.printWrongValue();
+                }
+            }
+
+        }
     }
 }
