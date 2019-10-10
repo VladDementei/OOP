@@ -7,11 +7,11 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class CommandsPrinter {
-
     static {
         writer = new PrintWriter(System.out, true);
     }
     private static PrintWriter writer;
+
     public static void setWriter(PrintWriter writer) {
         CommandsPrinter.writer = writer;
     }

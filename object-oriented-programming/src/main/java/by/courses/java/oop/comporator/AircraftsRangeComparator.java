@@ -1,7 +1,6 @@
 package by.courses.java.oop.comporator;
 
 import by.courses.java.oop.model.aircraft.Aircraft;
-
 import java.util.Comparator;
 
 public class AircraftsRangeComparator implements Comparator<Aircraft> {

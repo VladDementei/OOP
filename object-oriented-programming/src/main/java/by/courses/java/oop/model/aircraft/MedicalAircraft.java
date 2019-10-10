@@ -5,7 +5,6 @@ import java.util.List;
 
 public class MedicalAircraft extends SpecialPurposeAircraft {
     public enum MedicalEquipment{TOMOGRAPH, VENTILATOR, ULTRASOUND_MACHINE}
-
     public List<MedicalEquipment> onBoardEquipment;
 
     public MedicalAircraft(String producerCompany, String model, String tailNumber, double maxWeightCarriedKG,

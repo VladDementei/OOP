@@ -3,7 +3,6 @@ package by.courses.java.oop.model.airline;
 import by.courses.java.oop.check.ParamsChecker;
 import by.courses.java.oop.model.aircraft.Aircraft;
 import by.courses.java.oop.model.aircraft.PassengerAircraft;
-import by.courses.java.oop.model.aircraft.SpecialPurposeAircraft;
 
 import java.util.ArrayList;
 import java.util.Comparator;
