@@ -43,7 +43,7 @@ public class CommandsPrinter {
         writer.println(airline.getAllAircraftsInfo());
     }
 
-    public static void printAirlineinfo(Airline airline){
+    public static void printAirlineInfo(Airline airline){
         writer.println(airline);
     }
 
@@ -57,7 +57,7 @@ public class CommandsPrinter {
 
     public static void printSortedAirline(Airline airline){
         writer.println("Airline after sort");
-        printAirlineinfo(airline);
+        printAirlineInfo(airline);
         printFleet(airline);
     }
 
