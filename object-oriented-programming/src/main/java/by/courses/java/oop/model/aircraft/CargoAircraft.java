@@ -1,6 +1,6 @@
 package by.courses.java.oop.model.aircraft;
 
-public class CargoAircraft extends Aircraft {
+public class CargoAircraft extends Aircraft implements Cloneable{
     private double maxCargoLengthMetres;
     private double maxCargoWidthMetres;
     private double maxCargoHeightMetres;
@@ -12,6 +12,11 @@ public class CargoAircraft extends Aircraft {
         this.maxCargoLengthMetres = maxCargoLengthMetres;
         this.maxCargoWidthMetres = maxCargoWidthMetres;
         this.maxCargoHeightMetres = maxCargoHeightMetres;
+    }
+
+    @Override
+    public CargoAircraft clone() throws CloneNotSupportedException {
+        return (CargoAircraft)super.clone();
     }
 
     @Override

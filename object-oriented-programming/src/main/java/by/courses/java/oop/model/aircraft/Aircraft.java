@@ -1,6 +1,6 @@
 package by.courses.java.oop.model.aircraft;
 
-public abstract class Aircraft {
+public abstract class Aircraft implements Cloneable{
     private String producerCompany;
     private String model;
     private String tailNumber;
@@ -16,6 +16,10 @@ public abstract class Aircraft {
         this.maxFlightRangeKM = maxFlightRangeKM;
     }
 
+    public void setTailNumber(String tailNumber) {
+        this.tailNumber = tailNumber;
+    }
+
     public double getMaxWeightCarriedKG() {
         return maxWeightCarriedKG;
     }
@@ -29,5 +33,10 @@ public abstract class Aircraft {
         return "Aircraft: producer company \"" + producerCompany + "\", model \"" + model +
                 "\", tail number \"" + tailNumber + "\", maximum weight carried = " + maxWeightCarriedKG +"kg" +
                 ", maximum flight range = " + maxFlightRangeKM + "km";
+    }
+
+    @Override
+    public Aircraft clone() throws CloneNotSupportedException {
+        return (Aircraft)super.clone();
     }
 }

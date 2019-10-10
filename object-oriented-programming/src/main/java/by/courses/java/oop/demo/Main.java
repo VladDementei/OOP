@@ -33,9 +33,17 @@ public class Main {
         airline.addAircraft(new PassengerAircraft("Airbus", "A380", "LUF19",
                 50600, 8000, 525, true));
 
-        airline.addAircraft(new FireFighterAircraft("Boeing", "740", "LUF120",
-                31000, 1000, false, 2000, true));
-        airline.addAircraft(new FireFighterAircraft("Boeing", "747", "LUF120",
+        Aircraft fireFighterAircraft= new FireFighterAircraft("Boeing", "740", "LUF120",
+                31000, 1000, false, 2000, true);
+        airline.addAircraft(fireFighterAircraft);
+        try {
+            FireFighterAircraft copy = ((FireFighterAircraft) fireFighterAircraft).clone();
+            copy.setTailNumber("LUF121");
+            airline.addAircraft(copy);
+        }catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+        airline.addAircraft(new FireFighterAircraft("Boeing", "747", "LUF122",
                 35000, 2000, false, 3000, false));
 
         airline.addAircraft(new MedicalAircraft("Boeing", "777", "LUF130",

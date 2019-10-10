@@ -1,6 +1,6 @@
 package by.courses.java.oop.model.aircraft;
 
-public class FireFighterAircraft extends SpecialPurposeAircraft {
+public class FireFighterAircraft extends SpecialPurposeAircraft implements Cloneable{
     private double waterVolumeM3;
     private boolean hasInflightWaterIntake;
 
@@ -14,6 +14,11 @@ public class FireFighterAircraft extends SpecialPurposeAircraft {
 
     public double getWaterVolumeM3() {
         return waterVolumeM3;
+    }
+
+    @Override
+    public FireFighterAircraft clone() throws CloneNotSupportedException {
+        return (FireFighterAircraft)super.clone();
     }
 
     @Override

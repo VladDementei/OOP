@@ -1,6 +1,6 @@
 package by.courses.java.oop.model.aircraft;
 
-public class PassengerAircraft extends Aircraft {
+public class PassengerAircraft extends Aircraft implements Cloneable{
     private int maxPassengersCarried;
     private boolean hasKitchen;
 
@@ -13,6 +13,11 @@ public class PassengerAircraft extends Aircraft {
 
     public int getMaxPassengersCarried() {
         return maxPassengersCarried;
+    }
+
+    @Override
+    public PassengerAircraft clone() throws CloneNotSupportedException {
+        return (PassengerAircraft)super.clone();
     }
 
     @Override
