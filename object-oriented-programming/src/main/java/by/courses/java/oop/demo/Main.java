@@ -90,8 +90,8 @@ public class Main {
                 }case "7":{
                     CommandsPrinter.printFilteredAircrafts(
                             airline.filter(new FireFighterWaterVolumeChecker(),
-                                    new FireFighterAircraft(null, null, null, 2000, 2000, false, 2500, true),
-                                    new FireFighterAircraft(null, null, null, 2000, 2000, false, 3500, true)));
+                                    new FireFighterAircraft(null, null, null, 0, 0, false, 2500, true),
+                                    new FireFighterAircraft(null, null, null, 0, 0, false, 3500, true)));
                     break;
                 }case "8":{
                     break USER_DIALOG;
