@@ -1,11 +1,14 @@
 package by.courses.java.oop.model.airline;
 
+import by.courses.java.oop.check.ParamsChecker;
 import by.courses.java.oop.model.aircraft.Aircraft;
 import by.courses.java.oop.model.aircraft.PassengerAircraft;
+import by.courses.java.oop.model.aircraft.SpecialPurposeAircraft;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Airline {
     public enum PricingPolicy{LOW_COST, SEMI_LOW_COST, NORMAL, PREMIUM}
@@ -42,6 +45,11 @@ public class Airline {
 
     public void sort(Comparator<Aircraft> comparator){
         aircraftFleet.sort(comparator);
+    }
+
+    public List<Aircraft> filter(ParamsChecker checker, Aircraft lowerBounds, Aircraft upperBounds){
+        return aircraftFleet.stream().filter(elem -> checker.isSatisfyParams(elem, lowerBounds, upperBounds))
+                .collect(Collectors.toList());
     }
 
     public double countTotalMaximumWeightCarried(){

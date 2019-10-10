@@ -1,10 +1,8 @@
 package by.courses.java.oop.demo;
 
+import by.courses.java.oop.check.RangeWeightCarriedChecker;
 import by.courses.java.oop.comporator.AircraftsRangeComparator;
-import by.courses.java.oop.model.aircraft.CargoAircraft;
-import by.courses.java.oop.model.aircraft.FireFighterAircraft;
-import by.courses.java.oop.model.aircraft.MedicalAircraft;
-import by.courses.java.oop.model.aircraft.PassengerAircraft;
+import by.courses.java.oop.model.aircraft.*;
 import by.courses.java.oop.model.airline.Airline;
 
 import java.util.Arrays;
@@ -72,6 +70,11 @@ public class Main {
                     ConsolePrinter.printSortedAirline(airline);
                     break;
                 }case "5":{
+                    ConsolePrinter.printFilteredAircrafts(
+                            airline.filter(new RangeWeightCarriedChecker(),
+                            new PassengerAircraft(null, null, null, 2000, 2000, 0, false),
+                            new PassengerAircraft(null, null, null, 50000, 5000, 0, false)));
+
                     break;
                 }case "6":{
                     break USER_DIALOG;

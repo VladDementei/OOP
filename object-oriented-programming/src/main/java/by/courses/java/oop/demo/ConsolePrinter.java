@@ -1,6 +1,9 @@
 package by.courses.java.oop.demo;
 
+import by.courses.java.oop.model.aircraft.Aircraft;
 import by.courses.java.oop.model.airline.Airline;
+
+import java.util.List;
 
 public class ConsolePrinter {
 
@@ -49,6 +52,11 @@ public class ConsolePrinter {
     public static void printSortedAirline(Airline airline){
         System.out.println("Airline after sort");
         printAllAircrafts(airline);
+    }
+
+    public static void printFilteredAircrafts(List<Aircraft> filtered){
+        System.out.println("Aircrafts according your params:");
+        filtered.forEach(System.out::println);
     }
 
     public static void printWrongValue(){
