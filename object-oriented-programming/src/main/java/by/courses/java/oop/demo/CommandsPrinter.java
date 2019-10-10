@@ -9,7 +9,20 @@ import java.util.List;
 public class CommandsPrinter {
 
     static {
-        COMMANDS_LIST = "Available commands: \n" +
+        writer = new PrintWriter(System.out, true);
+    }
+    private static PrintWriter writer;
+    public static void setWriter(PrintWriter writer) {
+        CommandsPrinter.writer = writer;
+    }
+
+    public static void startConsolePrinter(){
+        writer.println("Type number of command to execute");
+        printCommandsList();
+    }
+
+    public static void printCommandsList(){
+        writer.println("Available commands: \n" +
                 "1 - print command list\n" +
                 "2 - print airline fleet\n" +
                 "3 - count total maximum weight carried\n" +
@@ -17,36 +30,16 @@ public class CommandsPrinter {
                 "5 - sort by all aircrafts by maximum range\n" +
                 "6 - search aircrafts by range and weight carried\n" +
                 "7 - search firefighter aircrafts by water volume\n" +
-                "8 - close application";
-        EXECUTE = "Execute method ";
-        ERROR = "Typed unresolved command";
-        writer = new PrintWriter(System.out, true);
-    }
-    private static final String COMMANDS_LIST;
-    private static final String EXECUTE;
-    private static final String ERROR;
-    private static PrintWriter writer;
-
-    public static void startConsolePrinter(){
-        writer.println("Type number of command to execute");
-        printCommandsList();
-    }
-
-    public static void setWriter(PrintWriter writer) {
-        CommandsPrinter.writer = writer;
-    }
-
-    public static void printCommandsList(){
-        writer.println(COMMANDS_LIST);
+                "8 - close application");
     }
 
     public static void printExecuteLine(){
-        writer.print(EXECUTE);
+        writer.print("Execute method ");
         writer.flush();
     }
 
     public static void printFleet(Airline airline){
-        writer.println("Airline fleet: ");
+        writer.println("Airline fleet:");
         writer.println(airline.getAllAircraftsInfo());
     }
 
@@ -78,6 +71,6 @@ public class CommandsPrinter {
     }
 
     public static void printWrongValue(){
-        writer.println(ERROR);
+        writer.println("Typed unresolved command");
     }
 }
