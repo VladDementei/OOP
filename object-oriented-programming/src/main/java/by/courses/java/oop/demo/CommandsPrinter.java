@@ -3,9 +3,10 @@ package by.courses.java.oop.demo;
 import by.courses.java.oop.model.aircraft.Aircraft;
 import by.courses.java.oop.model.airline.Airline;
 
+import java.io.PrintWriter;
 import java.util.List;
 
-public class ConsolePrinter {
+public class CommandsPrinter {
 
     static {
         COMMANDS_LIST = "Available commands: \n" +
@@ -19,57 +20,64 @@ public class ConsolePrinter {
                 "8 - close application";
         EXECUTE = "Execute method ";
         ERROR = "Typed unresolved command";
+        writer = new PrintWriter(System.out, true);
     }
     private static final String COMMANDS_LIST;
     private static final String EXECUTE;
     private static final String ERROR;
+    private static PrintWriter writer;
 
     public static void startConsolePrinter(){
-        System.out.println("Type number of command to execute");
+        writer.println("Type number of command to execute");
         printCommandsList();
     }
 
+    public static void setWriter(PrintWriter writer) {
+        CommandsPrinter.writer = writer;
+    }
+
     public static void printCommandsList(){
-        System.out.println(COMMANDS_LIST);
+        writer.println(COMMANDS_LIST);
     }
 
     public static void printExecuteLine(){
-        System.out.print(EXECUTE);
+        writer.print(EXECUTE);
+        writer.flush();
     }
 
     public static void printFleet(Airline airline){
-        System.out.println("Airline fleet: ");
-        System.out.println(airline.getAllAircraftsInfo());
+        writer.println("Airline fleet: ");
+        writer.println(airline.getAllAircraftsInfo());
     }
 
     public static void printAirlineinfo(Airline airline){
-        System.out.println(airline);
+        writer.println(airline);
     }
 
     public static void printTotalAmountPassengersSeats(int seats){
-        System.out.println("Sum of all passengers seats = " + seats);
+        writer.println("Sum of all passengers seats = " + seats);
     }
 
     public static void printTotalMaximumWeightCarried(double sum){
-        System.out.println("Sum of all maximum weight carried = " + sum + "kg");
+        writer.println("Sum of all maximum weight carried = " + sum + "kg");
     }
 
     public static void printSortedAirline(Airline airline){
-        System.out.println("Airline after sort");
+        writer.println("Airline after sort");
         printAirlineinfo(airline);
         printFleet(airline);
     }
 
     public static void printFilteredAircrafts(List<Aircraft> filtered){
         if(filtered.size() > 0) {
-            System.out.println("Aircrafts according your params:");
-            filtered.forEach(System.out::println);
+            writer.println("Aircrafts according your params:");
+            filtered.forEach(writer::println);
         }else {
-            System.out.println("No aircrafts for your filter");
+            writer.println("No aircrafts for your filter");
         }
     }
 
     public static void printWrongValue(){
-        System.out.println(ERROR);
+        writer.println(ERROR);
     }
 }

@@ -53,34 +53,34 @@ public class Main {
 
     private static void startConsoleDialog(Airline airline){
         Scanner consoleScanner = new Scanner(System.in);
-        ConsolePrinter.startConsolePrinter();
+        CommandsPrinter.startConsolePrinter();
         USER_DIALOG: while (true){
-            ConsolePrinter.printExecuteLine();
+            CommandsPrinter.printExecuteLine();
             switch (consoleScanner.next()){
                 case "1": {
-                    ConsolePrinter.printCommandsList();
+                    CommandsPrinter.printCommandsList();
                     break;
                 }case "2":{
-                    ConsolePrinter.printFleet(airline);
+                    CommandsPrinter.printFleet(airline);
                     break;
                 }case "3":{
-                    ConsolePrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
+                    CommandsPrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
                     break;
                 }case "4":{
-                    ConsolePrinter.printTotalAmountPassengersSeats(airline.countTotalAmountPassengersSeats());
+                    CommandsPrinter.printTotalAmountPassengersSeats(airline.countTotalAmountPassengersSeats());
                     break;
                 }case "5":{
                     airline.sort(new AircraftsRangeComparator());
-                    ConsolePrinter.printSortedAirline(airline);
+                    CommandsPrinter.printSortedAirline(airline);
                     break;
                 }case "6":{
-                    ConsolePrinter.printFilteredAircrafts(
+                    CommandsPrinter.printFilteredAircrafts(
                             airline.filter(new RangeWeightCarriedChecker(),
                             new PassengerAircraft(null, null, null, 2000, 2000, 0, false),
                             new PassengerAircraft(null, null, null, 50000, 5000, 0, false)));
                     break;
                 }case "7":{
-                    ConsolePrinter.printFilteredAircrafts(
+                    CommandsPrinter.printFilteredAircrafts(
                             airline.filter(new FireFighterWaterVolumeChecker(),
                                     new FireFighterAircraft(null, null, null, 2000, 2000, false, 2500, true),
                                     new FireFighterAircraft(null, null, null, 2000, 2000, false, 3500, true)));
@@ -88,7 +88,7 @@ public class Main {
                 }case "8":{
                     break USER_DIALOG;
                 }default: {
-                    ConsolePrinter.printWrongValue();
+                    CommandsPrinter.printWrongValue();
                 }
             }
 
