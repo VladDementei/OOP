@@ -61,28 +61,31 @@ public class Main {
                     ConsolePrinter.printCommandsList();
                     break;
                 }case "2":{
-                    ConsolePrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
+                    ConsolePrinter.printFleet(airline);
                     break;
                 }case "3":{
-                    ConsolePrinter.printTotalAmountPassengersSeats(airline.countTotalAmountPassengersSeats());
+                    ConsolePrinter.printTotalMaximumWeightCarried(airline.countTotalMaximumWeightCarried());
                     break;
                 }case "4":{
+                    ConsolePrinter.printTotalAmountPassengersSeats(airline.countTotalAmountPassengersSeats());
+                    break;
+                }case "5":{
                     airline.sort(new AircraftsRangeComparator());
                     ConsolePrinter.printSortedAirline(airline);
                     break;
-                }case "5":{
+                }case "6":{
                     ConsolePrinter.printFilteredAircrafts(
                             airline.filter(new RangeWeightCarriedChecker(),
                             new PassengerAircraft(null, null, null, 2000, 2000, 0, false),
                             new PassengerAircraft(null, null, null, 50000, 5000, 0, false)));
                     break;
-                }case "6":{
+                }case "7":{
                     ConsolePrinter.printFilteredAircrafts(
                             airline.filter(new FireFighterWaterVolumeChecker(),
                                     new FireFighterAircraft(null, null, null, 2000, 2000, false, 2500, true),
                                     new FireFighterAircraft(null, null, null, 2000, 2000, false, 3500, true)));
                     break;
-                }case "7":{
+                }case "8":{
                     break USER_DIALOG;
                 }default: {
                     ConsolePrinter.printWrongValue();

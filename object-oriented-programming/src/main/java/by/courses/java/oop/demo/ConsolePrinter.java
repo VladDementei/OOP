@@ -9,13 +9,14 @@ public class ConsolePrinter {
 
     static {
         COMMANDS_LIST = "Available commands: \n" +
-                "1 - print info about airline\n" +
-                "2 - count total maximum weight carried\n" +
-                "3 - count total amount of places in passenger aircrafts\n" +
-                "4 - sort by all aircrafts by maximum range\n" +
-                "5 - search aircrafts by range and weight carried\n" +
-                "6 - search firefighter aircrafts by water volume\n" +
-                "7 - close application";
+                "1 - print command list\n" +
+                "2 - print airline fleet\n" +
+                "3 - count total maximum weight carried\n" +
+                "4 - count total amount of places in passenger aircrafts\n" +
+                "5 - sort by all aircrafts by maximum range\n" +
+                "6 - search aircrafts by range and weight carried\n" +
+                "7 - search firefighter aircrafts by water volume\n" +
+                "8 - close application";
         EXECUTE = "Execute method ";
         ERROR = "Typed unresolved command";
     }
@@ -36,10 +37,13 @@ public class ConsolePrinter {
         System.out.print(EXECUTE);
     }
 
-    public static void printAllAircrafts(Airline airline){
-        System.out.println(airline);
+    public static void printFleet(Airline airline){
         System.out.println("Airline fleet: ");
         System.out.println(airline.getAllAircraftsInfo());
+    }
+
+    public static void printAirlineinfo(Airline airline){
+        System.out.println(airline);
     }
 
     public static void printTotalAmountPassengersSeats(int seats){
@@ -52,7 +56,8 @@ public class ConsolePrinter {
 
     public static void printSortedAirline(Airline airline){
         System.out.println("Airline after sort");
-        printAllAircrafts(airline);
+        printAirlineinfo(airline);
+        printFleet(airline);
     }
 
     public static void printFilteredAircrafts(List<Aircraft> filtered){
