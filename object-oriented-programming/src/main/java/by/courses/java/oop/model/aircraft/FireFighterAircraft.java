@@ -12,6 +12,10 @@ public class FireFighterAircraft extends SpecialPurposeAircraft {
         this.hasInflightWaterIntake = hasInflightWaterIntake;
     }
 
+    public double getWaterVolumeM3() {
+        return waterVolumeM3;
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", water volume = " + waterVolumeM3 + "m3" +

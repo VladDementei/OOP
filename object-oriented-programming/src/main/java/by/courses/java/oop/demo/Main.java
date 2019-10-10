@@ -1,5 +1,6 @@
 package by.courses.java.oop.demo;
 
+import by.courses.java.oop.check.FireFighterWaterVolumeChecker;
 import by.courses.java.oop.check.RangeWeightCarriedChecker;
 import by.courses.java.oop.comporator.AircraftsRangeComparator;
 import by.courses.java.oop.model.aircraft.*;
@@ -74,9 +75,14 @@ public class Main {
                             airline.filter(new RangeWeightCarriedChecker(),
                             new PassengerAircraft(null, null, null, 2000, 2000, 0, false),
                             new PassengerAircraft(null, null, null, 50000, 5000, 0, false)));
-
                     break;
                 }case "6":{
+                    ConsolePrinter.printFilteredAircrafts(
+                            airline.filter(new FireFighterWaterVolumeChecker(),
+                                    new FireFighterAircraft(null, null, null, 2000, 2000, false, 2500, true),
+                                    new FireFighterAircraft(null, null, null, 2000, 2000, false, 3500, true)));
+                    break;
+                }case "7":{
                     break USER_DIALOG;
                 }default: {
                     ConsolePrinter.printWrongValue();

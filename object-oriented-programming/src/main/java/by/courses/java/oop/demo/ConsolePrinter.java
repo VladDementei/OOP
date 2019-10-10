@@ -13,8 +13,9 @@ public class ConsolePrinter {
                 "2 - count total maximum weight carried\n" +
                 "3 - count total amount of places in passenger aircrafts\n" +
                 "4 - sort by all aircrafts by maximum range\n" +
-                "5 - search aircrafts\n" +
-                "6 - close application";
+                "5 - search aircrafts by range and weight carried\n" +
+                "6 - search firefighter aircrafts by water volume\n" +
+                "7 - close application";
         EXECUTE = "Execute method ";
         ERROR = "Typed unresolved command";
     }
@@ -55,8 +56,12 @@ public class ConsolePrinter {
     }
 
     public static void printFilteredAircrafts(List<Aircraft> filtered){
-        System.out.println("Aircrafts according your params:");
-        filtered.forEach(System.out::println);
+        if(filtered.size() > 0) {
+            System.out.println("Aircrafts according your params:");
+            filtered.forEach(System.out::println);
+        }else {
+            System.out.println("No aircrafts for your filter");
+        }
     }
 
     public static void printWrongValue(){
