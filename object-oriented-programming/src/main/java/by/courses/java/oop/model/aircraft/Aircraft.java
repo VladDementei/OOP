@@ -7,7 +7,7 @@ public abstract class Aircraft implements Cloneable{
     private double maxWeightCarriedKG;
     private int maxFlightRangeKM;
 
-    public Aircraft(String producerCompany, String model, String tailNumber,
+    protected Aircraft(String producerCompany, String model, String tailNumber,
                     double maxWeightCarriedKG, int maxFlightRangeKM) {
         this.producerCompany = producerCompany;
         this.model = model;
